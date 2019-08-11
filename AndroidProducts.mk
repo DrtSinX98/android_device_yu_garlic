@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_garlic.mk
+    $(LOCAL_DIR)/viper_garlic.mk
