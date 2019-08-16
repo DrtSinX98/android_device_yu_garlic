@@ -24,16 +24,16 @@ $(call inherit-product, device/yu/garlic/device.mk)
 # Inherit from common device
 $(call inherit-product, device/tinno/msm8937-common/msm8937.mk)
 
-# Inherit some common ViperOS stuff.
-$(call inherit-product, vendor/viper/config/common_full_phone.mk)
+# Inherit some common DOT-OS stuff.
+$(call inherit-product, vendor/dot/config/common.mk)
 
-# Its Official ViperOS
-VIPER_BUILD_TYPE := OFFICIAL
+
+
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := garlic
-PRODUCT_NAME := viper_garlic
+PRODUCT_NAME := dot_garlic
 PRODUCT_BRAND := yu
 PRODUCT_MODEL := YU Yureka Black
 PRODUCT_MANUFACTURER := yu
