@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_garlic.mk
+    $(LOCAL_DIR)/pa_garlic.mk
