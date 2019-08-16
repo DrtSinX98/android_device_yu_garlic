@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Check for the target product.
+ifeq (pa_garlic,$(TARGET_PRODUCT))
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -24,8 +27,16 @@ $(call inherit-product, device/yu/garlic/device.mk)
 # Inherit from common device
 $(call inherit-product, device/tinno/msm8937-common/msm8937.mk)
 
-# Inherit some common DOT-OS stuff.
-$(call inherit-product, vendor/dot/config/common.mk)
+
+# Set bootanimation to 1080p display
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Inherit some common Aospa stuff.
+TARGET_ARCH := arm64
+TARGET_DENSITY := xxhdpi
+
+# Inherit from our common CAF device tree.
+include device/qcom/common/common.mk
 
 
 
@@ -33,7 +44,7 @@ $(call inherit-product, vendor/dot/config/common.mk)
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := garlic
-PRODUCT_NAME := dot_garlic
+PRODUCT_NAME := pa_garlic
 PRODUCT_BRAND := yu
 PRODUCT_MODEL := YU Yureka Black
 PRODUCT_MANUFACTURER := yu
@@ -45,3 +56,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := YU/YU5040/YU5040:7.1.1/NMF26F/1502798695:user/release-keys
+
+# Paranoid Android platform
+include vendor/pa/main.mk
+
+endif
