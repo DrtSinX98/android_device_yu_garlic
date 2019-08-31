@@ -38,7 +38,7 @@ $(call inherit-product, vendor/revengeos/config/gsm.mk)
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := garlic
-PRODUCT_NAME := revenge_garlic
+PRODUCT_NAME := revengeos_garlic
 PRODUCT_BRAND := yu
 PRODUCT_MODEL := YU Yureka Black
 PRODUCT_MANUFACTURER := yu
