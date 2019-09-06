@@ -29,6 +29,7 @@ $(call inherit-product, device/tinno/msm8937-common/msm8937.mk)
 IS_PHONE := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
+REVENGEOS_BUILDTYPE := OFFICIAL
 
 # Inherit Some common Stuff from RevengeOS
 $(call inherit-product, vendor/revengeos/config/common.mk)
